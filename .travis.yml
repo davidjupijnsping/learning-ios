@@ -10,4 +10,5 @@ before_install:
   - pod repo update --silent
 
 script:
-  - xcodebuild clean test -project Learning.xcodeproj -scheme Learning
+  - xcodebuild clean test -project Learning.xcodeproj -scheme Learning -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
+
