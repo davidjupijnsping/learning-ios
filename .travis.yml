@@ -1,13 +1,13 @@
 language: objective-c
 
-xcode_project: Learning.xcworkspace
-xcode_scheme: LearningTests
+xcode_project: Learning.xcodeproj
+xcode_scheme: Learning
 osx_image: xcode8
 
 before_install:
-  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-  - pod repo update --silent
+  - xcodebuild -list -project Learning.xcodeproj
+  # - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+  # - pod repo update --silent
 
 script:
-  - xcodebuild -list -workspace Learning.xcworkspace
-  - xcodebuild clean test -workspace Learning.xcworkspace -scheme Learning
+  - xcodebuild clean test -project Learning.xcodeproj -scheme Learning
