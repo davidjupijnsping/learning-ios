@@ -10,4 +10,4 @@ before_install:
 
 script:
   - xcodebuild -list -workspace Learning.xcworkspace
-  - xcodebuild clean test -workspace Learning.xcworkspace -target Learning -scheme Learning
+  - xcodebuild clean test -workspace Learning.xcworkspace -scheme Learning
