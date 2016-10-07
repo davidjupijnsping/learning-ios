@@ -5,9 +5,9 @@ xcode_scheme: Learning
 osx_image: xcode8
 
 before_install:
-  - xcodebuild -list -project Learning.xcodeproj
+  # - xcodebuild -list -project Learning.xcodeproj
   # - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-  # - pod repo update --silent
+  - pod repo update --silent
 
 script:
   - xcodebuild clean test -project Learning.xcodeproj -scheme Learning
