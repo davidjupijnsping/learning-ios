@@ -9,5 +9,5 @@ before_install:
   - pod repo update --silent
 
 script:
-  - xcodebuild -list
-  - xcodebuild clean test -workspace Learning.xcworkspace -scheme Learning
+  - xcodebuild -list -workspace Learning.xcworkspace
+  - xcodebuild clean test -workspace Learning.xcworkspace -target Learning -scheme Learning
